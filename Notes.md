@@ -9,7 +9,7 @@ Mobx constitute of following:
 Observable is state. It is minimally defined. It should not contain redundant or derivable data.
 They can be graphs, contain classes, arrays,  refs etc.
 
-```
+```javascript
  @observable
  todos = [{
    title: 'mobx',
@@ -22,7 +22,7 @@ They can be graphs, contain classes, arrays,  refs etc.
 ## Actions
 Actions are the only means to update the state and may have other side-effects.
 
-```
+```javascript
  @action
  onClick = () => {
    this.props.todo.done = true;
@@ -42,7 +42,7 @@ Reactions react to state change and produce side-effects, like update UI
 Computed values are the values that are derived from the state using a **pure function**.
 They are updated by Mobx automatically and are optimized when not used.
 
-```
+```javascript
  @computed
  get completedTodo(){
    return this.todos.filter(todo => todo.done)
