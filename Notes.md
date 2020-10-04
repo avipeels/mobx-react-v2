@@ -24,6 +24,7 @@ Observable decorators can be:
 ```
 
 **Observables used after async code wont be tracked**
+**Assigning observables to object will remove mobx abilities and it is no more an observable**
 
 ## Actions
 Actions are the only means to update the state and may have other side-effects.
