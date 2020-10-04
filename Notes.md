@@ -15,6 +15,7 @@ They can be graphs, contain classes, arrays,  refs etc.
    done: false
    }]
 `
+
 **Observables used after async code wont be tracked**
 
 ## Actions
@@ -25,10 +26,11 @@ Actions are the only means to update the state and may have other side-effects.
    this.props.todo.done = true;
  }
 `
+
 **Don't put async code in actions, because the batching will not be efficient**
 
 ## Reactions
-Reactions react to state change and produce side-effects
+Reactions react to state change and produce side-effects, like update UI
 
 1. Autorun: Tracks every observable inside it. It needs to be disposed.
 2. Reaction: Triggered by the condition you pass to it. Needs to be disposed.
@@ -43,6 +45,7 @@ They are updated by Mobx automatically and are optimized when not used.
    return this.todos.filter(todo => todo.done)
  }
 `
+
 **They are similar to Reactions but instead of producing side-effects, they return a value**
 
 **Computed values that are used in the Reaction function will be cached**
