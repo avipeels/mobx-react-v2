@@ -9,10 +9,10 @@ Mobx constitute of following:
 Observable is state. It is minimally defined. It should not contain redundant or derivable data. They can be graphs, contain classes, arrays,  refs etc. Observable wraps the object with a new onw with mobx capabilities. `toJS()` can be used to get the normal object from it.
 
 Observable decorators can be:
-a. shallow
-b. ref
-c. struct
-d. deep ( default )
+1. shallow
+2. ref
+3. struct
+4. deep ( default )
 
 
 ```javascript
