@@ -10,7 +10,7 @@ import { observable, action, autorun, runInAction } from "mobx";
 
 class Person {
   @observable // controlled by developer
-  firstName: string;
+  firstName: string
   @observable
   lastName: string;
 
